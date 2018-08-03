@@ -36,3 +36,10 @@
 	}
 	
 }
+
+.popular-recipes {
+	@include custom_respond(804px) {
+			display: none;	
+			
+		}
+}

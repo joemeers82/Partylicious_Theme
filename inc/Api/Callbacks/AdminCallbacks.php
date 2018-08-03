@@ -72,7 +72,7 @@ class AdminCallbacks
 		echo '</div>';
 		echo '<div class=" align-top d-inline-block border rounded">';
 		$this->posts_dropdown_menu('post_one','post_one_id');
-		echo '<input type="text" name="post_one_tag" value="'.$postOneTag.'" placeholder="Post Tag" /><p>';
+		echo '<input class="w-100" type="text" name="post_one_tag" value="'.$postOneTag.'" placeholder="Post Tag" /><p>';
 		
 		echo '</div>';
 		
@@ -92,7 +92,7 @@ class AdminCallbacks
 		echo '</div>';
 		echo '<div class=" align-top d-inline-block border rounded">';
 		$this->posts_dropdown_menu('post_two','post_two_id');
-		echo '<input type="text" name="post_two_tag" value="'.$postTwoTag.'" placeholder="Post Tag" />';
+		echo '<input class="w-100" type="text" name="post_two_tag" value="'.$postTwoTag.'" placeholder="Post Tag" />';
 		echo '</div>';
 		echo '</div>';
 		
@@ -110,7 +110,7 @@ class AdminCallbacks
 		echo '</div>';
 		echo '<div class="align-top d-inline-block border rounded">';
 		$this->posts_dropdown_menu('post_three','post_three_id');
-		echo '<input type="text" name="post_three_tag" value="'.$postThreeTag.'" placeholder="Post Tag" />';
+		echo '<input class="w-100" type="text" name="post_three_tag" value="'.$postThreeTag.'" placeholder="Post Tag" />';
 		echo '</div>';
 		echo '</div>';
 		

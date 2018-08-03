@@ -25,11 +25,19 @@
 	}
 	
 	@if $breakpoint == large{
-		@media(max-width:960px){@content};
+		@media(max-width:993px){@content};
 	}
 	
 	@if $breakpoint == extraLarge{
 		@media(max-width:1140px){@content};
 	}
+
+	@if $breakpoint == largest{
+		@media(max-width:1200px){@content};
+	}
 	
+}
+
+@mixin custom_respond($custom) {
+	@media(max-width: $custom){@content};
 }

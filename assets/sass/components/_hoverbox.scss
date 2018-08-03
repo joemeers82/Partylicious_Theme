@@ -1,0 +1,230 @@
+.hoverbox {
+	overflow:hidden;
+	height:$articleImg-height-fs;	
+	
+	@include respond(largest) {
+		height:248px;
+		width:289px;
+	}
+
+	@include respond(large) {
+		height:auto;
+		width:auto;
+	}
+
+	&__img_container {
+		overflow: hidden;
+		position:relative;
+	}  
+	
+	&:hover .hoverbox__img_container .hoverbox__article-title {
+		height:60px;
+		transition: height 	1500ms;
+		@include respond(large) {
+			height:40px;
+		}
+	}
+
+	&__description {
+		position: absolute;
+		top: 0;
+	    height: 100%;
+	    width:$articleImg-width-fs;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    z-index:9999;
+	    background: linear-gradient(
+		                to right bottom, 
+		                rgba($color-primary-light,.5), 
+		                rgba($color-primary-dark,.5)
+		            );
+		opacity:0;
+		
+		@include respond(largest) {
+			width:290px;
+		}
+
+		@include respond(large) {
+			display: none;	
+		}
+
+		&:hover {
+			opacity:1;
+			transition: opacity 2000ms linear;
+		}
+		
+
+		
+		
+		&:hover a {
+			padding:.3rem;
+			opacity:1;
+			animation: expandOverlay 2s;
+			
+		}
+		
+		& a {
+			margin-top:-2.5rem;
+			opacity:0;
+			border-top: 1px solid white;
+			border-bottom: 1px solid white;
+			line-height: 1.6rem;
+			overflow:hidden;
+			text-align: center;
+			width:90%;
+			box-shadow: 0 1.5rem 6rem rgba($black,.25);
+			background-color: rgba($color-primary-light,.2);
+			
+			& span{
+				text-transform: uppercase;
+				transition:all .2s;
+				color:$color-secondary-dark;
+				font-size:1rem;
+				font-weight:300;
+			}
+			
+			&:hover {
+					text-decoration:none;
+					
+					span {
+						font-weight:400;
+					}
+					
+			}
+			
+
+		}
+		
+		&:hover ~ .hoverbox__triangle_container {
+			animation-name: moveUp;
+	  		animation-duration: 3000ms;
+	  		animation-timing-function: linear;
+		}
+
+		&:hover ~ .hoverbox__triangle_container .hoverbox__triangles {
+			animation-name: triangleFade;
+			animation-duration:3000ms;
+		}
+	}
+
+
+	&__article-title {
+		width:100%;
+		overflow: hidden;
+		text-align:center;
+		position: absolute;
+		bottom:0;
+		height:0px;
+		z-index:99999;
+		background-color:$color-primary-light;
+		display: flex;
+		align-items:center;
+		justify-content:center;
+		&:hover {
+			font-weight:400;
+		}
+		a{
+			text-transform: uppercase;
+			transition:all .3s;
+			color:$color-secondary-dark;
+			font-weight:300;
+			font-size: 1rem;
+
+			&:hover {
+				transition:all .1s;
+				text-decoration:none;
+				font-weight:400;
+				
+			}
+		}
+
+		@include respond(large) {
+			height:40px;
+			font-size:.9rem;
+			background-color: rgba($color-primary-light,.8);
+		}
+	}
+	
+	&__img {
+		height:$articleImg-height-fs;
+		width:$articleImg-width-fs;
+		object-fit:cover;
+	}
+	
+	
+
+	&__triangle_container{
+		height:$articleImg-height-fs;
+		width:$articleImg-width-fs;
+		padding:0 1rem;
+		position:relative;
+	  	display: flex;
+	  	flex-direction:row;
+		justify-content:space-between;
+		margin-top:0px;
+
+		@include respond(largest) {
+			height:248px;
+			width:289px;
+		}
+
+		@include respond(large) {
+			display: none;	
+		}
+	}
+	
+	&__triangles {
+		padding-right:1rem;
+		padding-left: 1rem;
+		display: flex;
+		height:100%;
+	  	flex-direction:column;
+		justify-content:space-between;
+
+		&:nth-child(even) {
+			padding-bottom:1.6rem;
+			padding-top:1.6rem;
+		}
+		&:nth-child(odd) {
+			padding-top:.1rem;
+			padding-bottom:.1rem;
+		}
+
+		.triangle  {
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 8px 13px 8px;
+		}
+
+		.right{
+			animation-name: spinRight;
+	  		animation-duration: 4000ms;
+	  		animation-iteration-count: infinite;
+	  		animation-timing-function: linear; 
+		}
+		.left {
+			animation-name: spinLeft;
+	  		animation-duration: 3800ms;
+	  		animation-iteration-count: infinite;
+	  		animation-timing-function: linear; 
+		}
+
+	}
+}
+
+.top_posts_row {
+	@include custom_respond(804px) {
+			display: none;	
+			
+		}
+}
+
+
+
+.darkPurple{border-color: transparent transparent $color-secondary-light transparent;}
+.aqua{border-color: transparent transparent #52d2bb transparent;}
+.darkPink{border-color: transparent transparent $color-primary-light transparent;}
+.purple{border-color: transparent transparent $color-primary transparent;}
+

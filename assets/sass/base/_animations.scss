@@ -1,0 +1,59 @@
+
+@keyframes moveUp {
+	0% {
+        margin-top:-50px;
+        
+    }
+	
+    100% {
+		margin-top:-$articleImg-height-fs;
+	}
+}
+
+
+@keyframes titleMoveUp {
+	from{
+		height:0px;
+	}
+	to{
+		max-height:60px;
+	}
+}
+
+
+
+
+@keyframes spinRight {
+    from {
+        transform:rotate(0deg);
+        
+    }
+    to {
+		
+        transform:rotate(360deg);
+    }
+}
+
+
+@keyframes spinLeft {
+    from {
+        transform:rotate(0deg);
+
+    }
+    to {
+        transform:rotate(-360deg);
+    }
+}
+
+@keyframes triangleFade {
+	10%{ opacity:.5;}
+	20%{ opacity:.5;}
+	30%{ opacity:.7;}
+	40%{ opacity:.8;}
+	50%{ opacity:1;}
+	60%{ opacity:.9;}
+	70%{ opacity:.8;}
+	80%{ opacity:.6;}
+	90%{ opacity:.4;}
+	100%{ opacity:.1;}
+}
