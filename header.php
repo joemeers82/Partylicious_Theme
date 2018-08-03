@@ -37,7 +37,7 @@
 	<![endif]-->
 </head>
 
-<body class="m-0" <?php body_class(); ?> >
+<body class="m-0 p-0" <?php body_class(); ?> >
 	<?php 
 		$siteLogo       = esc_attr( get_option('site-header-logo') );
 		
