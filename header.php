@@ -92,7 +92,7 @@
 					
 				</div>
 			</div>
-			<div class="row mb-4 mt-1">
+			<div class="row mb-4">
 				<div class="col-md-6" id="bottom_nav_menu">
 					<?php 
 						wp_nav_menu( array(
