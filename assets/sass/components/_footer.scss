@@ -1,0 +1,9 @@
+.footer {
+	background-color:$color-primary;
+}
+
+.footer-subscription {
+	@include respond(large) {
+		display: none;
+	}
+}

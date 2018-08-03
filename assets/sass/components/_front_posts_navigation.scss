@@ -1,0 +1,30 @@
+.front_posts_navigation {
+	
+	@include clearfix;
+	
+	margin-top:1.4rem;
+	&__ul {
+	
+		margin-top:1rem;
+		list-style:none;
+		float:right;
+	}
+
+	&__li {
+		display: inline-block;
+		padding:.3rem;
+		width:2rem;
+		text-align:center;
+		font-weight:300;
+		background-color:$color-primary-light;
+		transition: all .5s;
+		&:not(:last-child) {
+			margin-right:1rem;
+		}
+		&:hover {
+			background-color:$color-primary;
+			transition: all .5s;
+			cursor:pointer;
+		}
+	}
+}

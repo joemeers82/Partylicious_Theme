@@ -1,0 +1,38 @@
+// .sign-up {
+
+// }
+
+.sign-up {
+	padding:.3rem 1.3rem;
+	text-align: center;
+	background-color:$color-primary-lightest;
+
+	&__inside {
+		
+	}
+	
+	&__input {
+		border:none;
+		width:80%;
+		&:focus {
+			outline:solid 2px rgba($blue,.3);
+		}
+	}
+
+	&__button {
+		width:80%;
+		border:none;
+		background-color: $color-primary-dark;
+		padding:.2rem 0;
+		&:focus {
+			outline:none;
+		}
+		&:hover {
+			background-color: $color-primary-darkest;
+			cursor:pointer;
+			transition: all .5s;
+		}
+
+	}
+	
+}

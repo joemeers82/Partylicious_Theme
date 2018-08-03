@@ -1,0 +1,35 @@
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin centerHorizontalVertical {
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+
+
+//  MEDIA QUERY MANAGER
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == small{
+		@media(max-width:540px){@content};
+	}
+	
+	@if $breakpoint == medium{
+		@media(max-width:720px){@content};
+	}
+	
+	@if $breakpoint == large{
+		@media(max-width:960px){@content};
+	}
+	
+	@if $breakpoint == extraLarge{
+		@media(max-width:1140px){@content};
+	}
+	
+}

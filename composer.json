@@ -1,0 +1,17 @@
+{
+    "name": "josephjankowski/misfit-foodie",
+    "description": "Custom Wordpress Theme",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Joe Meers Jankowski",
+            "email": "JoeMeers82@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload" : {
+        "psr-4": {"Inc\\" :"./inc"}
+    }
+}
